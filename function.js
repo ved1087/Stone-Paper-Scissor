@@ -46,41 +46,41 @@ function playGame(userChoice){
   } 
   
   else {
-    // let userWin = true;
-    // if (userChoice === "rock") {
-    //   //scissors, paper
-    //   userWin = compChoice === "paper" ? false : true;
+    let userWin = true;
+    if (userChoice === "rock") {
+      //scissors, paper
+      userWin = compChoice === "paper" ? false : true;
+    } 
+    else if (userChoice === "paper") {
+      //rock, scissors
+      userWin = compChoice === "scissors" ? false : true;
+    } 
+    else {
+      //rock, paper
+      userWin = compChoice === "rock" ? false : true;
+    }
+
+
+    // if (userChoice === "rock" && compChoice ==="paper"){
+    //   userWin = false;
     // } 
-    // else if (userChoice === "paper") {
-    //   //rock, scissors
-    //   userWin = compChoice === "scissors" ? false : true;
-    // } 
-    // else {
-    //   //rock, paper
-    //   userWin = compChoice === "rock" ? false : true;
+    // else{
+    //   userWin = true; 
     // }
 
-
-    if (userChoice === "rock" && compChoice ==="paper"){
-      userWin = false;
-    } 
-    else{
-      userWin = true; 
-    }
-
-    if (userChoice === "paper" && compChoice === "scissors") {
-      userWin = false;
-    } 
-    else{
-      userWin = true;
-    }
+    // if (userChoice === "paper" && compChoice === "scissors") {
+    //   userWin = false;
+    // } 
+    // else{
+    //   userWin = true;
+    // }
     
-    if(userChoice === "scissors" && compChoice ==="rock"){
-      userWin = false;
-    }
-    else{
-      userWin = true;
-    }
+    // if(userChoice === "scissors" && compChoice ==="rock"){
+    //   userWin = false;
+    // }
+    // else{
+    //   userWin = true;
+    // }
 
     
     showWinner(userWin, userChoice, compChoice);
